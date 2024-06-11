@@ -28,7 +28,7 @@ app.use(
 );
 app.use(express.static("./uploads/"));
 
-const CONNECTION_URL = "mongodb://localhost/memories";
+const CONNECTION_URL = process.env.URL;
 const PORT = process.env.PORT || 5000;
 mongoose
   .connect(CONNECTION_URL)
